@@ -4,7 +4,7 @@ test('Home Page', async ({page})=>{
 
     await page.goto('https://alpaca.kz/');
 
-    const pageTitle = page.title();
+    const pageTitle = await page.title();
     console.log('Page title is:', pageTitle);
 
     await expect(page).toHaveTitle('Аренда детских товаров в Алматы с доставкой — Alpaca');
