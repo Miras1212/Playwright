@@ -13,9 +13,9 @@ test('LocateMultipleElements', async ({page}) => {
    }
    */
   //Locate all the products displayed on home page
-   page.waitForSelector("//div[@id='tbodyid']//h4/a");
+   page.waitForSelector("xpath=//div[@id='tbodyid']//h4/a");
 
-    const products = await page.$$("//div[@id='tbodyid']//h4/a")
+    const products = await page.$$("xpath=//div[@id='tbodyid']//h4/a")
 
     for(const product of products)
     {
@@ -23,4 +23,5 @@ test('LocateMultipleElements', async ({page}) => {
         console.log(prodName);
     }
 
+    await page.close();
 })
