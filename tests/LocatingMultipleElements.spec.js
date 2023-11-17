@@ -13,7 +13,7 @@ test('LocateMultipleElements', async ({page}) => {
    }
    */
   //Locate all the products displayed on home page
-   page.waitForSelector("xpath=//div[@id='tbodyid']//h4/a");
+   await page.waitForSelector('xpath=//div[@id="tbodyid"]//h4/a', {timeout: 3000});
 
     const products = await page.$$("xpath=//div[@id='tbodyid']//h4/a")
 
