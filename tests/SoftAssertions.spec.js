@@ -14,14 +14,4 @@ test('Soft assertions', async ({page}) => {
      await expect.soft(page).toHaveURL('https://demoblaze.com/')
      await expect.soft(page.locator('.navbar-brand')).toBeVisible();
 
-
-
-
-
-
-
-
-
-
-
 })
